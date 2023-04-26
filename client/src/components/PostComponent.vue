@@ -118,7 +118,7 @@ export default {
   display: inline-block;
   background-color: #a86a24;
   color: #ffffff;
-  font-size: 1rem;
+  font-size: 1.5rem;
   width: 200px;
   font-weight: 500;
   border: none;
@@ -127,6 +127,7 @@ export default {
   cursor: pointer;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border: 3px solid #ffffff;
+  font-family: 'Bukhari Script', sans-serif;
   
 }
 
