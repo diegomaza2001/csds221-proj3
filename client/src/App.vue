@@ -2,7 +2,7 @@
   <div >
     <v-row>
       <v-col>
-        <img alt="Vue logo" src="./assets/logo.png">
+        <img alt="Vue logo" src="./assets/MazaGram.png" width="500">
       </v-col>
       
     </v-row>

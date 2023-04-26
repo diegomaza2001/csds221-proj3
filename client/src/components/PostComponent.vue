@@ -2,12 +2,11 @@
   <div class="container">
     
       
-      <h1 class="title">Latest Posts</h1>
+      <h1 class="title" >Create a Post</h1>
       
     
     
       <div class="create-post">
-        <label for="create-post">Create a post</label>
         <textarea
           class="input-style"
           id="create-post"
@@ -69,13 +68,11 @@ export default {
     async createPost(){
       await PostService.insertPost(this.text);
       this.posts = await PostService.getPosts()
-      this.showToastr = true
+      this.text = ''
     },
     async deletePost(id){
       await PostService.deletePost(id);
       this.posts = await PostService.getPosts()
-      this.showToastr = true
-      this.toastrText = "Post was deleted!"
       
     }
   }
@@ -84,15 +81,20 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
+@import url('https://fonts.cdnfonts.com/css/bukhari-script');
 .container {
   max-width: 800px;
   margin: 0 auto;
 }
 
 .title {
-  font-size: 2rem;
+  font-size: 5rem;
   text-align: center;
   margin-bottom: 2rem;
+  color: #a2d5ff;
+  -webkit-text-stroke: 0.1px #ffffff;
+  font-family: 'Bukhari Script', sans-serif;
+  
 }
 
 .create-post {
@@ -104,11 +106,12 @@ export default {
   border: 5px solid #a86a24;
   border-radius: 10px;
   padding: 1rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font: bold;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   resize: none;
-  font-family: Georgia, serif;
+  color: #a86a24;
+  font-family: 'Bukhari Script', sans-serif;
 }
 
 .btn {
@@ -156,7 +159,8 @@ export default {
 .post-content {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  font-family: Georgia, serif;
+  font-family: 'Bukhari Script', sans-serif;
+  color: #a86a24;
 }
 
 .post-actions {
